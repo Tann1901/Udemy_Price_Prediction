@@ -60,9 +60,11 @@ In order to further understand our target variable and its relationships with th
 
 #### 4.2.1 Distribution Free versus Paid	
 ![image](https://github.com/Tann1901/Udemy_Price_Prediction/assets/108020327/dfc08132-f46a-47ac-92b9-4d1365203749)
+
 The pie chart above visualizes the distribution of Udemy’s free and paid courses. It is not unusual to see that only a small proportion of the courses are free. As a business, their sole purpose is to generate income. However, it makes sense that they offer free courses as well and the reason for this may include but not limited to; testing new content, market exposure and user acquisition, showcasing course content and quality, social impact and accessibility and attracting instructors to the platform.
 #### 4.2.2 Price Frequency	
 ![image](https://github.com/Tann1901/Udemy_Price_Prediction/assets/108020327/49cde7a8-c517-472f-a9c6-6c418d470b94)
+
 The figure 4.2.2 is a chart plotting the frequency of Udemy’s pricing and from the graph we can see that the most occurring price is 25 dollars, followed by slightly above 50 dollars and then 200 dollars. We also notice that the frequency of pricing is varied which will suggest that Udemy applies a dynamic pricing strategy. This may be in response to market trends, promotional activity or simply their approach to staying competitive in a highly saturated market. 
 
 #### 4.2.3 Distribution Free versus Paid by Subjects	
@@ -71,6 +73,7 @@ The bar chart above shows the distribution of free/paid courses per subject area
 
 #### 4.2.4 Average Price by Subject	
 ![image](https://github.com/Tann1901/Udemy_Price_Prediction/assets/108020327/746d1424-3ad7-47fe-937b-b1c3d3a5d31a)
+
 This one highlights the median price by subject with the highest and lowest as Web Development and Musical Instrument respectively.
 
 #### 4.2.1 Course Quality versus Price Correlation	
