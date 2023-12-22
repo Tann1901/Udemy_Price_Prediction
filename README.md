@@ -69,6 +69,7 @@ The figure 4.2.2 is a chart plotting the frequency of Udemy’s pricing and from
 
 #### 4.2.3 Distribution Free versus Paid by Subjects	
 ![image](https://github.com/Tann1901/Udemy_Price_Prediction/assets/108020327/5b37c25b-7f27-41ba-8a9a-d91f6a269717)
+
 The bar chart above shows the distribution of free/paid courses per subject area. We see from the graph that graphic design and musical instruments have a lower number of free courses when compared to Business Finance and Web development. This may be a result of the niche nature of the former courses. 
 
 #### 4.2.4 Average Price by Subject	
