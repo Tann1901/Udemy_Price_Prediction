@@ -45,6 +45,7 @@ The dataset needed to be modified for some columns and rows to better support su
 
 ## 4. METHODOLOGY	
 ### 4.1 Data Cleaning and Preprocessing	
+
 The initial step involved a comprehensive examination of null values and duplicate rows within the dataset. Null values in the 'Course ID' column were addressed by removing the corresponding rows. For the 'Free/Paid' column, null values were filled based on the course pricing information. Specifically, if the course is free (price = 0), the 'Free/Paid' column was filled with 'Free'; otherwise, it was labelled as 'Paid.' Duplicate rows were identified and subsequently removed, ensuring the elimination of redundant information.
 
 Subsequently, the data formatting was adjusted. the 'published_timestamp' column contained timestamps that were converted into a more interpretable and standardized format. The 'Date' column was extracted from 'published_timestamp,' and the resulting data were converted into datetime format. 
@@ -56,6 +57,7 @@ Finally, to streamline the dataset and focus on essential features for the machi
 The culmination of these data cleaning and preprocessing steps has resulted in a refined and structured dataset, poised for further exploration and application in machine learning models.
 
 ### 4.2 Data Visualization	
+
 In order to further understand our target variable and its relationships with the predictor variables, we completed some relevant visualizations. These are shown below.
 
 #### 4.2.1 Distribution Free versus Paid	
@@ -85,9 +87,11 @@ These visualizations informed the machine learning algorithms we subsequently us
 
 ## 5. MODELS ANALYSIS
 ### 5.1 Free/Paid Classification	
+
 To perform binary classification of the data into Free (0) and Paid (1) categories, we split the dataset into training and validation sets. The validation set size is set to 40% of the total data. The input features used for classification include course_id, price, num_subscribers, num_reviews, num_lectures, content_duration, Date, RatingScore, Level_Encoded, Subject_Encoded, and year.
 
 #### 5.1.1 Logistic Regression	
+
 We first utilize the logistic regression algorithm. Logistic regression is a supervised learning algorithm that is commonly used for binary classification problems, such as predicting whether a course should be offered for free or as a paid option.
 The logistic regression model achieved impressive performance on the test set, as demonstrated by the evaluation metrics and confusion matrix below:
 | Metric       | Score               |
@@ -102,6 +106,7 @@ These metrics indicate that the model has a high level of accuracy in predicting
 
 
 #### 5.1.2 Random Forest	
+
 We also implemented the Random Forest classifier for the free/paid prediction task. Random Forest is a popular ensemble learning method in machine learning that combines multiple decision trees to make predictions. It is widely used for both classification and regression tasks due to its ability to handle complex datasets and provide accurate predictions.
 
 The performance of the Random Forest classifier was evaluated with high accuracy:
@@ -115,6 +120,7 @@ The performance of the Random Forest classifier was evaluated with high accuracy
 ![image](https://github.com/Tann1901/Udemy_Price_Prediction/assets/108020327/a4260a52-88d6-4f3b-99ff-d778956bf51e)
 
 #### 5.1.3 Neural Networks	
+
 Neural networks are powerful machine learning models capable of capturing complex relationships in the data. The choice of activation function, hidden layer architecture, and solver can significantly impact the model's performance. For predicting free versus paid, a neural network classifier using the MLPClassifier from scikit-learn, with 2 nodes, one layer and 2 outputs (binary classification 0 ad 1). The evaluation metrics and confusion matrix are achieved as below:
 | Metric       | Score   |
 |--------------|---------|
@@ -126,9 +132,11 @@ Neural networks are powerful machine learning models capable of capturing comple
 ![image](https://github.com/Tann1901/Udemy_Price_Prediction/assets/108020327/48176373-f5c6-4f63-aa65-87f531ab2d03)
 
 ### 5.2 Price Prediction	
+
 Once we have classified the data into categories 0 and 1, we exclude the variables where the price is equal to 0. We then proceed to use the paid data frame for further prediction using the models described below after splitting data into train and valid sets, with a valid size of 40%.
 
 #### 5.2.1 Linear Regression	
+
 Linear regression is a popular algorithm used for predicting continuous values. We apply this model and get an evaluation report as:
 | Evaluation Metric       | Value     |
 |-------------------------|-----------|
@@ -137,6 +145,7 @@ Linear regression is a popular algorithm used for predicting continuous values. 
 | R-squared               | 0.1598    |
 
 #### 5.2.2 Gradient Boosting	
+
 Gradient Boosting is a powerful ensemble algorithm used for predicting continuous values. In Gradient Boosting, a series of weak models are sequentially trained to correct the errors made by the previous models, resulting in a strong predictive model. The evaluation metrics obtained from the Gradient Boosting model are as follows:
 | Evaluation Metric       | Value     |
 |-------------------------|-----------|
@@ -145,7 +154,9 @@ Gradient Boosting is a powerful ensemble algorithm used for predicting continuou
 | R-squared               | 0.2513    |
 
 #### 5.2.3 Neural Networks	
+
 Neural networks, implemented using MLPRegressor, are powerful machine learning models capable of capturing complex relationships in the data. We applied the MLPRegressor model with the configuration of one layer and 4 hidden nodes. The evaluation metrics obtained from the Neural networks model are as follows:
+
 | Evaluation Metric       | Value     |
 |-------------------------|-----------|
 | Mean Squared Error      | 2975.94   |
@@ -165,17 +176,26 @@ In Price Prediction, while the accuracies were moderate with Linear Regression a
 ![image](https://github.com/Tann1901/Udemy_Price_Prediction/assets/108020327/6556854b-80ef-4f53-bbaf-5b95f99a1993)
 
 ## 8. SUGGESTION
+
 For further improvement of the model and prediction, we suggest the following.
+
 Pricing Strategy Alignment with Quality: Our pricing models must also consider the quality and content of the courses. Integrating quality metrics into our models can ensure that prices reflect the value provided to students, thereby aligning pricing with course excellence.
+
 Enhancing Data Collection: We must focus on enriching our datasets to improve our models' accuracy, especially in price prediction. This can be achieved through:
 Updating Profiles and Course Information: Regularly updating the profiles of instructors and detailed course information can provide deeper insights into course value and popularity, which are key factors in pricing.
+
 Discount and Marketing Campaign History: Incorporating historical data on discounts and marketing campaigns can offer a more comprehensive view of pricing trends and their impact on course enrollment and satisfaction.
 
 ## 9. REFERENCE
+
 Chen, X., Li, Y., Zhang, J., & Liu, Y. (2020). A machine learning approach to predicting student success in online courses. Computers & Education, 144, 103701. https://doi.org/10.1016/j.compedu.2019.103701
+
 Kim, J., & Lee, W. (2018). Factors influencing online course pricing: An empirical analysis of Udemy. Journal of Open Innovation: Technology, Market, and Complexity, 4(4), 52. https://doi.org/10.1186/s40852-018-0104-3
+
 Li, X., Zhang, Y., Liu, Y., & Wang, Y. (2020). Pricing strategies for online education platforms: A review and research agenda. International Journal of Information Management, 55, 102189. https://doi.org/10.1016/j.ijinfomgt.2020.102189
+
 Li, X., Zhang, Y., Liu, Y., & Wang, Y. (2021). A machine learning framework for online course pricing optimization. Expert Systems with Applications, 174, 114783. https://doi.org/10.1016/j.eswa.2021.114783
+
 Liu, Q., Geert-Jan, H., & Oinas-Kukkonen, H. (2019). Machine learning for online course recommendation: A survey. International Journal of Information Management, 49, 1-15. https://doi.org/10.1016/j.ijinfomgt.2019.04.008
 
 
